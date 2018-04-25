@@ -6,8 +6,9 @@
 */
 
 #include <fstream>
+#include <cstdlib>
+#include <cstring>
 #include "allegro.h"
-
 
 using namespace std;
 

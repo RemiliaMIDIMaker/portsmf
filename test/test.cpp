@@ -758,9 +758,53 @@ void test33() // cut and inspect some notes
 }
 
 
-int main()
+int main(int argc, const char *argv[])
 {
-    test33();
-    printf("Test 33 done, type return to exit\n");
-    getchar();
+    if (argc != 2) {
+        return 0;
+    }
+
+    int i;
+    sscanf(argv[1], "%d", &i);
+
+    switch (i) {
+    case 1: test1(); break;
+    case 2: test2(); break;
+    case 3: test3(); break;
+    case 4: test4(); break;
+    case 5: test5(); break;
+    case 6: test6(); break;
+    case 7: test7(); break;
+    case 8: test8(); break;
+    case 9: test9(); break;
+    case 10: test10(); break;
+    case 11: test11(); break;
+    case 12: test12(); break;
+    case 13: test13(); break;
+    case 14: test14(); break;
+    case 15: test15(); break;
+    case 16: test16(); break;
+    case 17: test17(); break;
+    case 18: test18(); break;
+    case 19: test19(); break;
+    case 20: test20(); break;
+    case 21: test21(); break;
+    case 22: test22(); break;
+    case 23: test23(); break;
+    case 24: test24(); break;
+    case 25: test25(); break;
+    case 26: test26(); break;
+    case 27: test27(); break;
+    case 28: test28(); break;
+    case 29: test29(); break;
+    case 30: test30(); break;
+    case 31: test31(); break;
+    case 32: test32(); break;
+    case 33: test33(); break;
+    default: break;
+    }
+
+    printf("Test %d done\n", i);
+
+    return 0;
 }
