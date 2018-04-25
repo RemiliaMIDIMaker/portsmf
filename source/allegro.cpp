@@ -16,6 +16,7 @@
 #include "memory.h"
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 using namespace std;
 #include "allegro.h"
 #include "algrd_internal.h"
@@ -740,7 +741,7 @@ void Alg_event_list::set_start_time(Alg_event *event, double t)
     // For Alg_seq, find the track and do the update there
     
     long index, i;
-    Alg_track_ptr track_ptr;
+    Alg_track_ptr track_ptr = nullptr;
     if (type == 'e') { // this is an Alg_event_list
         // make sure the owner has not changed its event set
         assert(events_owner && 
